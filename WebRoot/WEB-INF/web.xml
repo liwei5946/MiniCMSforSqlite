@@ -4,22 +4,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
 	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-	<servlet>     
-   <servlet-name>ServletConfigurator</servlet-name>     
-   <servlet-class>     
-     org.logicalcobwebs.proxool.configuration.ServletConfigurator</servlet-class>     
-   <init-param>     
-     <param-name>xmlFile</param-name>     
-     <param-value>WEB-INF/proxool.xml</param-value>     
-   </init-param>     
-   <load-on-startup>1</load-on-startup>     
-</servlet>
-<servlet>     
-   <servlet-name>Admin</servlet-name>     
-   <servlet-class>     
-     org.logicalcobwebs.proxool.admin.servlet.AdminServlet       
-   </servlet-class>     
-</servlet>
+
   <servlet>
     <servlet-name>MobileLogin</servlet-name>
     <servlet-class>cn.edu.hbcit.minicms.controller.MobileLoginServlet</servlet-class>
@@ -35,10 +20,7 @@
 
 
 
-  <servlet-mapping>     
-   <servlet-name>Admin</servlet-name>     
-   <url-pattern>/admin</url-pattern>     
-</servlet-mapping>
+
   <servlet-mapping>
     <servlet-name>MobileLogin</servlet-name>
     <url-pattern>/MobileLogin</url-pattern>

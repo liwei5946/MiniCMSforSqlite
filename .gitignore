@@ -7,7 +7,8 @@
 *.jar
 *.war
 *.ear
-*.mdb
+*.db
 gallery/
 Uploads/
 userfiles/
+classes/
