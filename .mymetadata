@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="MiniCMSforSqlite"
+  id="myeclipse.1390727053406"
+  context-root="/MiniCMSforSqlite"
+  j2ee-spec="1.4"
+  archive="MiniCMSforSqlite.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
