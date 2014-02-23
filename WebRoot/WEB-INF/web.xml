@@ -5,6 +5,10 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
 	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
+<servlet>
+      <servlet-name>DruidStatView</servlet-name>
+      <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+  </servlet>
   <servlet>
     <servlet-name>MobileLogin</servlet-name>
     <servlet-class>cn.edu.hbcit.minicms.controller.MobileLoginServlet</servlet-class>
@@ -21,6 +25,10 @@
 
 
 
+<servlet-mapping>
+      <servlet-name>DruidStatView</servlet-name>
+      <url-pattern>/druid/*</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>MobileLogin</servlet-name>
     <url-pattern>/MobileLogin</url-pattern>
@@ -33,6 +41,19 @@
     <servlet-name>SelectNewsById</servlet-name>
     <url-pattern>/News</url-pattern>
   </servlet-mapping>
+  
+  <filter>
+    <filter-name>DruidWebStatFilter</filter-name>
+    <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
+    <init-param>
+        <param-name>exclusions</param-name>
+        <param-value>*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>DruidWebStatFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

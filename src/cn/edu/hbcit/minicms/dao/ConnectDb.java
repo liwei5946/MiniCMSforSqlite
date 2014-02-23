@@ -28,7 +28,7 @@ public class ConnectDb {
 	private static String url = "jdbc:sqlite:" + path + "\\minicms.db"; 
 //	private static String driveClassName = "org.logicalcobwebs.proxool.ProxoolDriver";//proxool驱动类
 //	private static int activeCount = 0; //活动连接数
-	private static DruidDataSource dds = new DruidDataSource();
+	private static DruidDataSource dds ;
 	
 	public static Connection Connect(){
 		Connection conn = null;
@@ -38,6 +38,7 @@ public class ConnectDb {
 //		log.debug(url);
 		try {
 //			Class.forName(driveClassName);
+			dds = new DruidDataSource();
 			dds.setDriverClassName(driveClassName);
 			dds.setUrl(url);
 			dds.setInitialSize(5);
@@ -46,10 +47,11 @@ public class ConnectDb {
 			dds.setFilters("stat");
 			dds.setPoolPreparedStatements(false);
 			dds.setValidationQuery("SELECT 'x'");
+//			dds.setFilters("wall");//防SQL注入功能不支持sqlite
 			
 			conn = dds.getConnection();
 		}catch (SQLException e) {
-			log.debug("Connect failed!");
+			log.debug("Connect failed! 请检查db.properties文件是否配置正确！");
 			e.printStackTrace();
 		}	
 		

@@ -1,2 +1,2 @@
 A mini content management system(CMS),only servlet and jsp,no framework anymore
-This system use dbutils,Sqlite datebase and proxool
+This system use Dbutils,Sqlite datebase and Druid pool
