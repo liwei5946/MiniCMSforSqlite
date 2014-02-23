@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<something-else-entirely>
+     <proxool>
+                <alias>minicms</alias>
+                <driver-url>jdbc:sqlite:D:\Java\Tomcat7\webapps\MiniCMSforSqlite\WEB-INF\data\minicms.db</driver-url>
+                <driver-class>org.sqlite.JDBC</driver-class>
+                <driver-properties>
+                        <property name="user" value="" />
+                        <property name="password" value="" />
+                </driver-properties>
+                <maximum-connection-count>100</maximum-connection-count>
+                <minimum-connection-count>10</minimum-connection-count>
+                <house-keeping-sleep-time>90000</house-keeping-sleep-time>
+                <maximum-new-connections>10</maximum-new-connections>
+                <prototype-count>5</prototype-count>
+                <test-before-use>false</test-before-use>
+                <house-keeping-test-sql>SELECT uid FROM passport</house-keeping-test-sql>
+     </proxool>
+</something-else-entirely>
